@@ -1,12 +1,4 @@
-/* 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #fff;
-    color: #333;
-} */
-
-/* Add a background image to the "About Us" page */
+/* Global Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -14,7 +6,7 @@ body {
     background-size: cover; /* Ensures the image covers the viewport */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-position: center; /* Centers the background image */
-    color: #333; /* Ensures text remains readable */
+    color: #333;
 }
 
 /* Optional: Add a semi-transparent background to the content for readability */
@@ -26,58 +18,62 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
 }
 
+
 header {
     background-color: #4CAF50;
     color: white;
     padding: 15px 0; /* Adjusted for better spacing with the logo */
    /* text-align: center;*/
-    position: relative;
     padding: 15px;
     display: flex;
     align-items: center; /* Align items vertically */
     justify-content: space-between; /* Space between logo/title and nav */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
     position: relative;
 }
 
-/* Logo Styling */
 .logo-container {
     display: flex;
     align-items: center;
-   /* margin-bottom: 10px; /* Space between the logo and the header text */
 }
 
 .logo {
-    max-width: 100px; /* Adjust size as needed */
+    max-width: 80px; /* Resize logo for smaller screens */
     height: auto;
-   /* display: block;
-    margin: 0 auto; /* Centers the logo */
 }
 
-nav a {
-   margin: 0 15px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+h1 {
+    font-size: 24px;
+    margin: 0;
+    flex-grow: 1; /* Let the title take available space */
+    text-align: left;
+    margin-left: 10px; /* Space between logo and title */
 }
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+
+nav a {
+    margin: 0 15px;
+     color: white;
+     text-decoration: none;
+     font-weight: bold;
+ }
 
 nav a:hover {
     text-decoration: underline;
 }
 
 .container {
-    width: 80%;
+    width: 90%; /* Full width on smaller devices */
+    max-width: 800px; /* Limit width on larger devices */
     margin: auto;
     padding: 20px;
 }
 
-h1 {
-    margin: 0;
-    font-size: 24px;
-    text-align: center;
-   
-    flex-grow: 1;
-    margin-left: 15px; /* Add space between logo and title */
-}
 
 h2, h3 {
     color: #4CAF50;
@@ -90,6 +86,8 @@ button {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+
+    
 }
 
 button:hover {
@@ -101,7 +99,61 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
+    position: relative;
     width: 100%;
+
+
+}
+
+/* Responsive Design */
+
+/* For devices smaller than 768px (tablets and smartphones) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack logo, title, and nav */
+        align-items: center;
+    }
+
+    .logo {
+        max-width: 60px; /* Smaller logo */
+    }
+
+    h1 {
+        font-size: 20px; /* Adjust title size */
+        text-align: center; /* Center align on smaller screens */
+        margin-left: 0;
+    }
+
+    nav {
+        flex-direction: column; /* Stack links */
+        gap: 10px;
+        align-items: center; /* Center links */
+        margin-top: 10px;
+    }
+
+    .container {
+        width: 95%; /* Increase width to fit smaller screens */
+        padding: 15px;
+    }
+
+    button {
+        width: 100%; /* Make buttons full width */
+        padding: 10px;
+    }
+}
+
+/* For very small devices smaller than 480px (small smartphones) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 18px; /* Smaller title for very small screens */
+    }
+
+    nav a {
+        font-size: 14px; /* Reduce font size for links */
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
 }
