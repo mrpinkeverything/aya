@@ -1,0 +1,107 @@
+/* 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+} */
+
+/* Add a background image to the "About Us" page */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('youths.jpg'); /* Replace 'about-bg.jpg' with the path to your image */
+    background-size: cover; /* Ensures the image covers the viewport */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the background image */
+    color: #333; /* Ensures text remains readable */
+}
+
+/* Optional: Add a semi-transparent background to the content for readability */
+.container {
+    background-color: rgba(255, 255, 255, 0.727); /* White background with slight transparency */
+    padding: 20px;
+    border-radius: 8px; /* Optional rounded corners */
+    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 0; /* Adjusted for better spacing with the logo */
+   /* text-align: center;*/
+    position: relative;
+    padding: 15px;
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Space between logo/title and nav */
+    position: relative;
+}
+
+/* Logo Styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+   /* margin-bottom: 10px; /* Space between the logo and the header text */
+}
+
+.logo {
+    max-width: 100px; /* Adjust size as needed */
+    height: auto;
+   /* display: block;
+    margin: 0 auto; /* Centers the logo */
+}
+
+nav a {
+   margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+   
+    flex-grow: 1;
+    margin-left: 15px; /* Add space between logo and title */
+}
+
+h2, h3 {
+    color: #4CAF50;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
